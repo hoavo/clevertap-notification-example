@@ -28,6 +28,7 @@ import CleverTap from "clevertap-react-native";
 
 const App = () => {
   CleverTap.registerForPush();
+  CleverTap.createNotificationChannel('com.onefc', 'com.onefc', 'com.onefc', 5, false);
   return (
     <Fragment>
       <StatusBar barStyle="dark-content" />
@@ -39,14 +40,14 @@ const App = () => {
           <Header />
           {global.HermesInternal == null ? null : (
             <View style={styles.engine}>
-              <Text style={styles.footer}>Engine: Hermes</Text>
+              <Text style={styles.footer}>Engine: Hermes1111</Text>
             </View>
           )}
           <View style={styles.body}>
             <View style={styles.sectionContainer}>
               <Text style={styles.sectionTitle}>Step One</Text>
               <Text style={styles.sectionDescription}>
-                Edit <Text style={styles.highlight}>App.js</Text> to change this
+                Edit <Text style={styles.highlight}>App.js111</Text> to change this
                 screen and then come back to see your edits.
               </Text>
             </View>
