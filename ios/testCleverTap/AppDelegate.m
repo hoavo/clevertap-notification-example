@@ -10,6 +10,8 @@
 #import <React/RCTBridge.h>
 #import <React/RCTBundleURLProvider.h>
 #import <React/RCTRootView.h>
+#import <CleverTap.h>
+#import <CleverTapReactManager.h>
 
 @implementation AppDelegate
 
@@ -27,6 +29,14 @@
   rootViewController.view = rootView;
   self.window.rootViewController = rootViewController;
   [self.window makeKeyAndVisible];
+  
+  // initialize CleverTap
+#ifdef DEBUG
+  [CleverTap setDebugLevel:CleverTapLogDebug];
+#endif
+  [CleverTap autoIntegrate];
+  [[CleverTapReactManager sharedInstance] applicationDidLaunchWithOptions:launchOptions];
+  
   return YES;
 }
 
