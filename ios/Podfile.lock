@@ -1,6 +1,12 @@
 PODS:
   - boost-for-react-native (1.63.0)
+  - CleverTap-iOS-SDK (3.5.0):
+    - SDWebImage/GIF (~> 4.0)
+  - clevertap-react-native (0.3.4):
+    - CleverTap-iOS-SDK (~> 3.5.0)
+    - React
   - DoubleConversion (1.1.6)
+  - FLAnimatedImage (1.0.12)
   - Folly (2018.10.22.00):
     - boost-for-react-native
     - DoubleConversion
@@ -81,9 +87,14 @@ PODS:
   - React-RCTWebSocket (0.60.3):
     - React-Core (= 0.60.3)
     - React-fishhook (= 0.60.3)
+  - SDWebImage/Core (4.4.7)
+  - SDWebImage/GIF (4.4.7):
+    - FLAnimatedImage (~> 1.0)
+    - SDWebImage/Core
   - yoga (0.60.3.React)
 
 DEPENDENCIES:
+  - clevertap-react-native (from `../node_modules/clevertap-react-native`)
   - DoubleConversion (from `../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec`)
   - Folly (from `../node_modules/react-native/third-party-podspecs/Folly.podspec`)
   - glog (from `../node_modules/react-native/third-party-podspecs/glog.podspec`)
@@ -110,8 +121,13 @@ DEPENDENCIES:
 SPEC REPOS:
   https://github.com/cocoapods/specs.git:
     - boost-for-react-native
+    - CleverTap-iOS-SDK
+    - FLAnimatedImage
+    - SDWebImage
 
 EXTERNAL SOURCES:
+  clevertap-react-native:
+    :path: "../node_modules/clevertap-react-native"
   DoubleConversion:
     :podspec: "../node_modules/react-native/third-party-podspecs/DoubleConversion.podspec"
   Folly:
@@ -159,7 +175,10 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   boost-for-react-native: 39c7adb57c4e60d6c5479dd8623128eb5b3f0f2c
+  CleverTap-iOS-SDK: 696bac1fbf68275e3eb3e19feba79208a8479478
+  clevertap-react-native: 0eb670159d34975538662c74bef9db6e14045bf2
   DoubleConversion: 5805e889d232975c086db112ece9ed034df7a0b2
+  FLAnimatedImage: 4a0b56255d9b05f18b6dd7ee06871be5d3b89e31
   Folly: 30e7936e1c45c08d884aa59369ed951a8e68cf51
   glog: 1f3da668190260b06b429bb211bfbee5cd790c28
   React: ac23e9cc8d2d4cfe9b536b5cc0c32d19b9937bcf
@@ -180,6 +199,7 @@ SPEC CHECKSUMS:
   React-RCTText: b026f8350c2cbe0daeb9880dd9c6e018fce0daf7
   React-RCTVibration: 5d9ed4a968e9d42880ddcc7c29bee3417c745408
   React-RCTWebSocket: 69d8565d66043f244b4129f3d7154c5689fb7d3e
+  SDWebImage: c10d14a8883ebd89664f02a422006f66a85c0c5d
   yoga: 843fe25849b56131275bf3e5da2c468e96f68aff
 
 PODFILE CHECKSUM: e3011c97bdbf89314c23ef10b98d15c5b1b59449
